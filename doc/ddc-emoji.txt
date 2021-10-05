@@ -1,0 +1,49 @@
+*ddc-emoji.txt*		Emoji source of ddc.vim
+
+Version: 0.0
+Author: Tatsumi Gamou <tatsumigamou@yahoo.co.jp>
+License: MIT License
+
+=============================================================================
+CONTENTS					*ddc-emoji-contents*
+
+INTRODUCTION				|ddc-emoji-introduction|
+INSTALL					|ddc-emoji-install|
+EXAMPLES				|ddc-emoji-examples|
+
+
+=============================================================================
+INTRODUCTION					*ddc-emoji-introduction*
+
+This source provides emoji convertion.
+
+=============================================================================
+INSTALL						*ddc-emoji-install*
+
+Please install both "ddc.vim" and "denops.vim".
+
+https://github.com/Shougo/ddc.vim
+https://github.com/vim-denops/denops.vim
+
+=============================================================================
+
+EXAMPLES					*ddc-emoji-examples*
+>
+>
+  " Use emoji source.
+  call ddc#custom#patch_global('sources', ['emoji'])
+
+  " Add matching patterns
+  call ddc#custom#patch_global('keywordPattern', '[a-zA-Z_:]\w*')
+
+  " Change source options
+  call ddc#custom#patch_global('sourceOptions', {
+    \ 'emoji': {
+    \	'mark': 'emoji',
+    \	'matchers': ['emoji'],
+    \	'sorters': [],
+    \	},
+    \  })
+<
+
+vim:tw=78:ts=8:ft=help:norl:noet:fen:noet:
