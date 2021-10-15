@@ -38,6 +38,7 @@ export class Source extends BaseSource<Record<string, never>> {
       return {
         word: e.emoji,
         abbr: e.emoji,
+        kind: e.name,
         user_data: {
           name: e.name,
           emoji: e.emoji,
