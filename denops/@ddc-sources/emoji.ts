@@ -1,12 +1,9 @@
-import {
-  BaseSource,
-  Candidate,
-} from "https://deno.land/x/ddc_vim@v0.15.0/types.ts";
+import { BaseSource, Item } from "https://deno.land/x/ddc_vim@v3.4.0/types.ts";
 
 import {
   EMOJIS,
   EMOJIS_ALIAS,
-} from "https://pax.deno.dev/99x/emojideno/src/constants.ts";
+} from "https://raw.githubusercontent.com/99x/emojideno/master/src/constants.ts";
 
 type Emojis = {
   [key: string]: string;
@@ -32,7 +29,7 @@ function getEmojis(): CompletionMetadata[] {
 }
 
 export class Source extends BaseSource<Record<string, never>> {
-  gatherCandidates(): Promise<Candidate<CompletionMetadata>[]> {
+  gather(): Promise<Item<CompletionMetadata>[]> {
     const candidates = getEmojis();
     const ddcCandidates = candidates.flatMap((e) => {
       return {
