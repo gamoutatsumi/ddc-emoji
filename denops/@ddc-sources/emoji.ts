@@ -1,4 +1,4 @@
-import { BaseSource, Item } from "https://deno.land/x/ddc_vim@v3.4.0/types.ts";
+import { BaseSource, Item } from "https://deno.land/x/ddc_vim@v5.0.0/types.ts";
 
 import {
   EMOJIS,
